@@ -1,0 +1,14 @@
+.page-item.active .page-link {
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #675C9C;
+  outline: none;
+  border: none;
+}
+.page-item .page-link{
+  color: #010127;
+  padding: 15px 20px;
+}
+.pagination{
+  gap: 5px;
+}

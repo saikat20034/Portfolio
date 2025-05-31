@@ -1,0 +1,7 @@
+.vertical-timeline-element-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  border-radius: 1000px;
+}

@@ -1,0 +1,103 @@
+.clientButton {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #675c9c;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+
+.clientButton::before,
+.clientButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.clientButton::before {
+  left: -10px;
+  background: linear-gradient(90deg, #675c9c, #010127);
+}
+
+.clientButton::after {
+  right: -10px;
+  background: linear-gradient(90deg, #010127, #675c9c);
+}
+
+.clientButton:hover::before,
+.clientButton:hover::after {
+  width: 58%;
+}
+
+.clientButton:hover span {
+  color: white;
+  transition: 0.3s;
+}
+
+.backButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #010127;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 2px #675c9c;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.backButton:hover {
+  width: 180px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: #675c9c;
+  align-items: center;
+}
+
+.backButton:hover .svgIcon {
+  transition-duration: 0.3s;
+  transform: translateX(-200px);
+}
+
+.backButton::before {
+  position: absolute;
+  bottom: -20px;
+  content: 'Back to Previous Page';
+  color: white;
+  font-size: 0px;
+}
+
+.backButton:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  transition-duration: 0.3s;
+}
+@media (max-width: 768px) {
+  .details {
+    margin: 0 20px;
+  }
+}
