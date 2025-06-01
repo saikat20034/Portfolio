@@ -9,13 +9,16 @@ import AddExperience from '../Pages/Dashboard/AddExperience/AddExperience';
 import UpdateSkills from '../Pages/Dashboard/AddSkills/UpdateSkills';
 import UpdateExperience from '../Pages/Dashboard/AddExperience/UpdateExperience';
 import AddProjects from '../Pages/Dashboard/AddProjects/AddProjects';
-import ProjectDetails from '../components/ProjectDetails/ProjectDetails';
+
 import UpdateProject from '../Pages/Dashboard/AddProjects/UpdateProject';
 import AddBlog from '../Pages/Dashboard/AddBlog/AddBlog';
 import UpdateBlog from '../Pages/Dashboard/AddBlog/UpdateBlog';
 import PrivateRoute from './PrivateRoute';
 import BlogDetails from '../components/BlogCard/BlogDetails';
 import AllProjects from '../Pages/Projects/AllProjects';
+import TradeNestDetails from '../components/TradeNest details/TradeNest';
+import VisaLandDetails from '../components/VisaLand/VisaLand details';
+import HotelHiveDetails from '../components/HotelHive/HotelHive details';
 
 export const router = createBrowserRouter([
   {
@@ -27,10 +30,7 @@ export const router = createBrowserRouter([
         path: '/',
         element: <Home />,
       },
-      {
-        path: '/project-details/:id',
-        element: <ProjectDetails />,
-      },
+
       {
         path: '/sign-in',
         element: <Login />,
@@ -46,6 +46,18 @@ export const router = createBrowserRouter([
             <AddSkills />
           </PrivateRoute>
         ),
+      },
+      {
+        path: '/project/tradenest',
+        element: <TradeNestDetails></TradeNestDetails>,
+      },
+      {
+        path: '/project/visaland',
+        element: <VisaLandDetails></VisaLandDetails>,
+      },
+      {
+        path: '/project/hotelhive',
+        element: <HotelHiveDetails></HotelHiveDetails>,
       },
       {
         path: '/update-skill/:id',
@@ -81,7 +93,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/view-all-projects',
-        element:<AllProjects />
+        element: <AllProjects />,
       },
       {
         path: '/update-project/:id',
@@ -109,8 +121,8 @@ export const router = createBrowserRouter([
       },
       {
         path: '/blog-details/:id',
-        element:<BlogDetails/>
-      }
+        element: <BlogDetails />,
+      },
     ],
   },
 ]);
